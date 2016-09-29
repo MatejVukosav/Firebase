@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PushNotifications</string>
+    <string name="fcm_registration_token">FCM registration token</string>
+</resources>

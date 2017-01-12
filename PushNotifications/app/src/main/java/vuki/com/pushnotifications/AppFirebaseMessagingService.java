@@ -3,14 +3,12 @@ package vuki.com.pushnotifications;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
-import android.text.TextUtils;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -61,12 +59,16 @@ public class AppFirebaseMessagingService extends FirebaseMessagingService {
 
     private void sendNotification( NotificationModel notificationModel ) {
         Intent launchingIntent;
-        if( TextUtils.isEmpty( notificationModel.getActionName() ) ) {
-            launchingIntent = new Intent( this, MainActivity.class );
-        } else {
-            launchingIntent = new Intent();
-            launchingIntent.setComponent( new ComponentName( this.getPackageName(), notificationModel.getActionName() ) );
-        }
+        //za zvonu
+        launchingIntent = new Intent( this, ZvoneMainActivity.class );
+        launchingIntent.putExtra( "data",notificationModel );
+
+//        if( TextUtils.isEmpty( notificationModel.getActionName() ) ) {
+//            launchingIntent = new Intent( this, ZvoneMainActivity.class );
+//        } else {
+//            launchingIntent = new Intent();
+//            launchingIntent.setComponent( new ComponentName( this.getPackageName(), notificationModel.getActionName() ) );
+//        }
         /** If set, and the activity being launched is already running in the current task,
          * then instead of launching a new instance of that activity,
          * all of the other activities on top of it will be closed and
@@ -83,7 +85,6 @@ public class AppFirebaseMessagingService extends FirebaseMessagingService {
         } else {
             notificationColor = ContextCompat.getColor( this, R.color.colorPrimaryDark );
         }
-
 
 //        // The stack builder object will contain an artificial back stack for the
 //        // started Activity.

@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "285129957170",
-    "firebase_url": "https://fashable-backend.firebaseio.com",
-    "project_id": "fashable-backend",
-    "storage_bucket": "fashable-backend.appspot.com"
+    "project_number": "1077056424932",
+    "firebase_url": "https://fir-testingandroid.firebaseio.com",
+    "project_id": "fir-testingandroid",
+    "storage_bucket": "fir-testingandroid.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:285129957170:android:5d47d9ac3cacfe26",
+        "mobilesdk_app_id": "1:1077056424932:android:5d47d9ac3cacfe26",
         "android_client_info": {
           "package_name": "vuki.com.pushnotifications"
         }
       },
       "oauth_client": [
         {
-          "client_id": "285129957170-bg0p999sluf4qcl3iojcaorn45redj2u.apps.googleusercontent.com",
+          "client_id": "1077056424932-agc05o4dmd2jonja20vih2q6opd70ra9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDUlgyRtuhBLVFzEbqqbnRux5zL-1FiMLw"
+          "current_key": "AIzaSyCjNK4dzPK0UHWreU84NeHvdqvVa03rLEU"
         }
       ],
       "services": {
